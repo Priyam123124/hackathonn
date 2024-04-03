@@ -16,7 +16,28 @@
     border: none;
     width: 17vw;
     height: 59px;
+    background-color: #ff0000;
+    border-radius: 20px;
 }
 .mod{
     height: 720px;
+}
+.picachuonpc{
+    width: 100%;
+    height: 100%;
+}
+input[type="text"] {
+    background-color: #ff0000;
+    border-radius: 20px;
+}
+
+input[type="text"]::placeholder {
+    color: black;
+}
+select{
+    background-color: #ff0000;
+    border-radius: 20px;
+}
+option {
+    background-color: white;
 }

@@ -46,3 +46,7 @@ a{
     width: 15vw;
     height: 8vw;
 }
+.shifting{
+    position: relative;
+    right: 3vw;
+}

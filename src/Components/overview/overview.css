@@ -7,7 +7,7 @@
 }
 .element_1_2{
     width: 75%;
-    background-color: #ABABAB;
+    /* background-color: #ABABAB; */
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -24,11 +24,12 @@
     margin-top: 5px;
 }
 .last_btn{
-    background-color: #ABABAB;
     border: none;
+    background-color: #e0e21a;
     margin-top: 32px;
     width: 20vw;
     height: 50px;
+    border-radius: 20px;
 }
 .box1{
     margin: 10px;

@@ -1,19 +1,21 @@
 import React from 'react'
 import './signup.css'
 import { Link } from 'react-router-dom'
+import picachu_on_pc from '../../images/picachu_on_pc.jpeg'
+import picachu_coder from '../../images/coder_picachu.png'
+import hacker_picachu from '../../images/hacker_picachu.png'
 
 const SignUp = () => {
     return (
         <>
             <div style={{ display: "flex" }}>
                 <div className='element1 mod'>
-                    <div className='logo11'></div>
-                    <p className='text123'>Write About App</p>
+                    <img src = {picachu_on_pc} alt = 'picachu_on_pc' className='picachuonpc'/>
                 </div>
                 <div className='element2 mod'>
                     <div>
                     <p style={{fontSize: "35px"}}>New User</p>
-                    <p style={{fontSize: "17px", marginTop: "8px"}}>Already have an account? <Link to="/login" style={{color: "black"}}>Sign in</Link></p>
+                    <p style={{fontSize: "17px", marginTop: "8px"}}>Already have an account? <Link to="/login" style={{color: "#ff0000"}}>Sign in</Link></p>
                     <div style={{display: "flex", marginTop: "8px"}}>
                         <div className='first'>
                             <p>First Name</p>
@@ -70,13 +72,13 @@ const SignUp = () => {
                         <div style={{display: "flex"}}>
                         <div className='first'>
                             <p>Email</p>
-                            <input type='text' placeholder='Enter your Email' className='sign_txtar big'/>
+                            <div style={{display: "flex"}}><input type='text' placeholder='Enter your Email' className='sign_txtar big'/><img src = {picachu_coder} alt = "picachu coder" style={{width: "8vw", position: "absolute", top: "480px", right: "8vw", zIndex: 1}}/></div>
                         </div>
                         </div> 
                         <div style={{display: "flex"}}>
                         <div className='first'>
                             <p>Password</p>
-                            <input type='text' placeholder='Enter your Password' className='sign_txtar big'/>
+                            <div style = {{display: "flex"}}><input type='text' placeholder='Enter your Password' className='sign_txtar big'/><img src = {hacker_picachu} alt = "picachu coder" style={{width: "8vw", position: "absolute", top: "600px", right: "8vw", zIndex: 1}}/></div>
                         </div>
                         </div> 
                         <div style={{display: "flex", flexDirection: "row-reverse", width: "26.6vw"}}>

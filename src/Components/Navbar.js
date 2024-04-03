@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link to="/profile"><div className='circle'><img src = {logo} rel='logo' className='logo'/></div></Link>
         <Link to="/profile"><div className='logo_name'>TEAMIFY</div></Link>
         <div className='nav_items'>
-        <ul>
+        <ul className='shifting'>
             <li><Link to="/">Home</Link></li>
             <li>About</li>
             <li>Contact</li>

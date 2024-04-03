@@ -2,19 +2,19 @@ import React from 'react'
 import './forgot.css'
 import { Link } from 'react-router-dom'
 import '../landing_page/Copyright'
+import picachu_on_pc3 from '../../images/picachu_on_pc3.jpeg'
 
 const Forgot = () => {
     return (
         <>
             <div style={{ display: "flex" }}>
                 <div className='element1'>
-                    <div className='logo11'></div>
-                    <p className='text123'>Write About App</p>
+                <img src= {picachu_on_pc3} alt = 'pikachu on pc' style={{width: "100%", height: "100%"}}/>
                 </div>
                 <div className='element2'>
                     <div>
                         <p style={{ fontSize: "27px" }}>Forgot Password? Reset Password</p>
-                        <p style={{ fontSize: "17px", marginTop: "8px" }}>New User? <Link to="/signup" style={{color: "black"}}>Create an account</Link></p>
+                        <p style={{ fontSize: "17px", marginTop: "8px" }}>New User? <Link to="/signup" style={{color: "#ff0000"}}>Create an account</Link></p>
                         <div style={{display: "flex"}}>
                         <div className='first'>
                             <p>Email</p>
