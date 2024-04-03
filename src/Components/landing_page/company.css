@@ -1,0 +1,38 @@
+.company{
+    width: 100%;
+    height: 264px;
+}
+.enter_text{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 541px;
+}
+.logos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logos2{
+    display: flex;
+}
+.logo3{
+    /*width: 10vw;
+    height: 10vw;
+    border-radius: 10vw;
+    background-color: #ABABAB;*/
+    width: 20vw;
+}
+
+.logo4{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 5vw;
+    background-color: #ABABAB;
+    margin: 15px;
+}
+.button_flex{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 20px;
+}

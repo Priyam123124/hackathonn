@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    width: 100%;
+    height: 84px;
+    display: flex;
+    align-items: center;
+}
+.circle{
+    /*height: 4vw;
+    width: 4vw;
+    border-radius: 4vw;
+    background-color: black;
+    margin-left: 1.5vw;*/
+}
+.logo_name{
+    /* margin-left: 27px; */
+    color: red;
+    font-size: 30px;
+    position: relative;
+    right: 3vw;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+    margin-left: 68px;
+    color: red;
+    font-size: 30px;
+}
+.nav_items{
+    width: 75vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+
+.logo{
+    width: 15vw;
+    height: 8vw;
+}

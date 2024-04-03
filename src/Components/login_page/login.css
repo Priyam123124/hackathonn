@@ -1,0 +1,45 @@
+.login{
+    display: flex;
+}
+.element1{
+    width: 50%;
+    height: 500px;
+    background-color: #ABABAB;
+}
+.element2{
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo11{
+    width: 153px;
+    height: 150px;
+    margin: 45px;
+    background-color: white;
+}
+.text123{
+    font-size: 25px;
+    margin-left: 45px;
+}
+.text121{
+    font-size: 30px;
+}
+.txtar{
+    border: none;
+    background-color: #ABABAB;
+    border-radius: 10px;
+    width: 26vw;
+    height: 57px;
+}
+.flexbox{
+    display: flex;
+}
+.margiin{
+    margin-top: 64px;
+}
+.margiin2{
+    margin-top: 15px;
+}

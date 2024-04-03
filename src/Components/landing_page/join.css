@@ -1,0 +1,29 @@
+.join{
+    width: 100%;
+    height: 264px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container12{
+    width: 76vw;
+    height: 203px;
+    background-color: #ff0000;
+    border-radius: 27px;
+}
+.center{
+    text-align: center;
+}
+.center2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button2{
+    margin-top: 4px;
+    border: none;
+    background-color: #0057ff;
+    width: 286px;
+    height: 50px;
+    border-radius: 25px;
+}

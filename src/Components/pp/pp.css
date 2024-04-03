@@ -1,0 +1,15 @@
+.pp{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.comp1{
+    width: 85%;
+    height: 84px;
+    background-color: #ABABAB;
+}
+.comp2{
+    background-color: #ABABAB;
+    width: 50%;
+    height: 300px;
+}

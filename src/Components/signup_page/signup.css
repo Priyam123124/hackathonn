@@ -1,0 +1,22 @@
+.sign_txtar{
+    border: none;
+    width: 18vw;
+    height: 54px;
+}
+.first{
+    margin: 8px;
+}
+.big{
+    width: 26vw;
+}
+.small{
+    width: 10vw;
+}
+.signupbtn{
+    border: none;
+    width: 17vw;
+    height: 59px;
+}
+.mod{
+    height: 720px;
+}

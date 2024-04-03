@@ -1,0 +1,60 @@
+.element_1_1{
+    width: 25%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.element_1_2{
+    width: 75%;
+    background-color: #ABABAB;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo_last{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 3vw;
+    background-color: #ABABAB;
+}
+.txt__margin{
+    margin-left: 12px;
+    margin-top: 5px;
+}
+.last_btn{
+    background-color: #ABABAB;
+    border: none;
+    margin-top: 32px;
+    width: 20vw;
+    height: 50px;
+}
+.box1{
+    margin: 10px;
+    width: 25vw;
+    height: 59px;
+    background-color: white;
+}
+.boxxx2{
+    margin: 10px;
+    background-color: white;
+    width: 51.5vw;
+    height: 351px;
+}
+.logo_last2{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 4vw;
+    background-color: #ABABAB;
+}
+.smallbox{
+    width: 3vw;
+    height: 27px;
+    margin-left: 8px;
+    background-color: #ABABAB;
+}
+.section{
+    width: 13vw;
+    font-size: 18px;
+}
