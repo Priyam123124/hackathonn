@@ -9,10 +9,14 @@ import Forgot from './Components/forgot_pass_page/Forgot';
 import Overview from './Components/overview/Overview';
 import Profile from './Components/profile/Profile';
 import Pp from './Components/pp/Pp';
+import UserState from './context/users/UserState';
+import userContext from './context/users/userContext';
+import { useContext, useEffect } from 'react';
 
 function App() {
   return (
     <>
+    <UserState>
     <BrowserRouter>
     <Navbar/>
     <Routes>
@@ -25,6 +29,7 @@ function App() {
       <Route exact path = "/privacy_policy" element={<Pp/>}/>
     </Routes>
     </BrowserRouter>
+    </UserState>
     </>
   );
 }

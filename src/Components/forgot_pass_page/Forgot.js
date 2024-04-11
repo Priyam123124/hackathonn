@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState} from 'react'
 import './forgot.css'
 import { Link } from 'react-router-dom'
 import '../landing_page/Copyright'

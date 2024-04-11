@@ -41,3 +41,10 @@ select{
 option {
     background-color: white;
 }
+
+.red{
+    background-color: #ff0000;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    display: flex;
+}
