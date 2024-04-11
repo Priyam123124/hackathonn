@@ -29,7 +29,7 @@ const UserState = (props) => {
 
     const createUser = async (D) => {
         try {
-            const response = await fetch("http://localhost:3000/api/auth/SignUp", {
+            const response = await fetch("https://back-end-rebase.vercel.app/api/auth/SignUp", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const UserState = (props) => {
 
     const loginUser = async (D) => {
         try {
-            const response = await fetch("http://localhost:3000/api/auth/login", {
+            const response = await fetch("https://back-end-rebase.vercel.app/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const UserState = (props) => {
     const [data2, setData2] = useState({})
 
     const fetchUser = async () =>{
-        const response = await fetch("http://localhost:3000/api/auth/getuser", {
+        const response = await fetch("https://back-end-rebase.vercel.app/api/auth/getuser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const UserState = (props) => {
 
     const [data3, setData3] = useState([])
     const getallusers = async () => {
-        const response = await fetch("http://localhost:3000/api/auth/userdetails", {
+        const response = await fetch("https://back-end-rebase.vercel.app/api/auth/userdetails", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

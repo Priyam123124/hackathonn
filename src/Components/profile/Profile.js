@@ -1,4 +1,4 @@
-import {React, useContext, useEffect} from 'react'
+import {React, useContext, useState, useEffect} from 'react'
 import userContext from '../../context/users/userContext'
 import './profile.css'
 import Useable from './Useable'
@@ -6,9 +6,16 @@ import profile from '../../images/profile.png'
 const Profile = () => {
     const context = useContext(userContext);
     const {data2, fetchUser} = context
+    const [date, setDate] = useState("");
     useEffect(()=>{
         fetchUser()
-    }, [])
+    },[])
+
+    useEffect(()=>{
+        if(data2?.date) { 
+            setDate(data2.date.slice(0, 10))
+            }
+    },[data2])
     console.log(data2)
     return (
         <>
@@ -20,7 +27,7 @@ const Profile = () => {
                         <div className='profile'>
                             <div className='profile1'><img src ={profile} alt='profile' style={{width: "16vw"}}/></div>
                             <p style={{fontSize: "2.3vw", marginTop: "15px"}}>{data2.name}</p>
-                            <p style={{fontSize: "1.5vw", marginTop: "15px"}}>Joined on 9th March</p>
+                            <p style={{fontSize: "1.5vw", marginTop: "15px"}}>Joined on {date}</p>
                             <p style={{fontSize: "2vw", marginTop: "25px"}}>About</p>
                             <p style={{fontSize: "1.5vw", marginTop: "15px"}}>About person</p>
                         </div>
