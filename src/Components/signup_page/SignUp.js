@@ -172,7 +172,7 @@ const SignUp = () => {
                         <div style={{display: "flex"}}>
                         <div className='first'>
                             <p>Password</p>
-                            <div style = {{display: "flex"}}><input type='text' placeholder='Enter your Password' className='sign_txtar big' name='password' onChange={change9} value={value9}/><img src = {hacker_picachu} alt = "picachu coder" style={{width: "8vw", position: "absolute", top: "600px", right: "8vw", zIndex: 1}}/></div>
+                            <div style = {{display: "flex"}}><input type='password' placeholder='Enter your Password' className='sign_txtar big' name='password' onChange={change9} value={value9}/><img src = {hacker_picachu} alt = "picachu coder" style={{width: "8vw", position: "absolute", top: "600px", right: "8vw", zIndex: 1}}/></div>
                         </div>
                         </div> 
                         <div style={{display: "flex", flexDirection: "row-reverse", width: "26.6vw"}}>

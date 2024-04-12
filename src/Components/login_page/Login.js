@@ -57,7 +57,7 @@ const Login = () => {
                     <p>Password</p>
                     <p style={{fontSize: "15px", marginTop: "15px", marginLeft: "7vw"}}><Link to="/forgot_password" style={{color: "black"}}>Forgot Password</Link></p>
                 </div>
-                <input type='text' placeholder='Enter Your Password'name='password' value={value2} onChange={change2} className='txtar'/><br/>
+                <input type='password' placeholder='Enter Your Password'name='password' value={value2} onChange={change2} className='txtar'/><br/>
                 <input type='button' value='Sign In' onClick={click} className='text121 txtar margiin2 bgcolor'/>
             </div>
             <div className='flexbox'>

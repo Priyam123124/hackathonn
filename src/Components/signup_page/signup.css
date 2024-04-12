@@ -31,7 +31,16 @@ input[type="text"] {
     border-radius: 20px;
 }
 
+input[type="password"] {
+    background-color: #ff0000;
+    border-radius: 20px;
+}
+
 input[type="text"]::placeholder {
+    color: black;
+}
+
+input[type="password"]::placeholder {
     color: black;
 }
 select{
