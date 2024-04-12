@@ -5,6 +5,7 @@ import '../landing_page/Copyright'
 import picachu_on_pc3 from '../../images/picachu_on_pc3.jpeg'
 
 const Forgot = () => {
+    document.title = 'Teamify - Reset Password'
     return (
         <>
             <div style={{ display: "flex" }}>

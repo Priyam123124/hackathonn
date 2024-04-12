@@ -7,6 +7,7 @@ const Profile = () => {
     const context = useContext(userContext);
     const {data2, fetchUser} = context
     const [date, setDate] = useState("");
+    document.title = 'Teamify - Your_Profile'
     useEffect(()=>{
         fetchUser()
     },[])

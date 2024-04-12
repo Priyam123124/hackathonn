@@ -13,6 +13,8 @@ const Login = () => {
     const [value2, setValue2] = useState("")
     const [data, setData] = useState({email: "", password: ""})
 
+    document.title = 'Teamify - Login'
+
     const change = (e) => {
         setValue(e.target.value);
         setData({...data, [e.target.name]: e.target.value})

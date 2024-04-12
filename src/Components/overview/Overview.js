@@ -6,6 +6,7 @@ import profile from '../../images/profile.png'
 const Overview = () => {
     const context = useContext(userContext);
     const {data3, getallusers, fetchUser, data2} = context
+    document.title = 'Teamify - Explore'
 
     useEffect(()=>{
         getallusers()

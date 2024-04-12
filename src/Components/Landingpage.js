@@ -10,14 +10,14 @@ import userContext from '../context/users/userContext'
 
 const Landingpage = () => {
   const context = useContext(userContext);
-  const { flag, setFlag } = context;
+  const { flag, setFlag, title, setTitle } = context;
   const userexists = localStorage.getItem("key");
-
   useEffect(()=>{
     if(userexists) {
       setFlag(true)
       console.log(flag)
     }
+    document.title = `Teamify - Home`
   },[])
   return (
     <>

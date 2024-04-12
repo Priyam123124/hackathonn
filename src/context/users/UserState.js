@@ -27,6 +27,8 @@ const UserState = (props) => {
         });
     };
 
+    const [title, setTitle] = useState('')
+
     const createUser = async (D) => {
         try {
             const response = await fetch("https://back-end-rebase.vercel.app/api/auth/SignUp", {
@@ -108,7 +110,7 @@ const UserState = (props) => {
     }
 
     return (
-        <UserContext.Provider value={{ data, createUser, setUserData, userData, flag, setFlag, loginUser, data2, fetchUser, data3, getallusers }}>
+        <UserContext.Provider value={{ data, createUser, setUserData, userData, flag, setFlag, loginUser, data2, fetchUser, data3, getallusers, title, setTitle }}>
             {props.children}
         </UserContext.Provider>
     );

@@ -10,7 +10,7 @@ import hacker_picachu from '../../images/hacker_picachu.png'
 const SignUp = () => {
     const navigate = useNavigate();
     const context = useContext(userContext);
-    const {createUser, fetchUser, flag, setFlag} = context
+    const {createUser, fetchUser, flag, setFlag, setTitle} = context
     const [userDATA, setUserDATA] = useState({name: "", email: "", password: "", age: "", phoneno: "", city: "", state: "", sports_prefrence: "" })
 
     const change = (e) => {
@@ -87,6 +87,7 @@ const SignUp = () => {
         } else {
             navigate("/signup")
         }
+        document.title = 'Teamify - SignUp'
     }, [flag])
 
 
