@@ -19,14 +19,17 @@ const Overview = () => {
 
 
     useEffect(() => {
-        fetchUser();
+        const func = async()=>{
+        await fetchUser();
+        setName(data2.name)
+        }
+        func();
         getallusers();
-    },[]);
+    }, []);
 
     const socket = io('https://rebase-chat-app.glitch.me');
     useEffect(() => {
         // Emit "new-user-joined" event when user data is available (once)
-        setName(data2.name)
         if (data2.name && !userJoined) {
             socket.emit('new-user-joined', name);
             setUserJoined(true);
