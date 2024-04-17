@@ -4,6 +4,7 @@ import './overview.css';
 import Useable from '../profile/Useable';
 import profile from '../../images/profile.png';
 import io from 'socket.io-client';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const Overview = () => {
     const context = useContext(userContext);
@@ -11,11 +12,27 @@ const Overview = () => {
     document.title = 'Teamify - Explore';
 
     const [message, setMessage] = useState([]);
-    //const [message2, setMessage2] = useState([])
+    const [message2, setMessage2] = useState([])
     const [value, setValue] = useState('');
     const [userJoined, setUserJoined] = useState(false); // Use useState with default false
     const [name, setName] = useState('')
     const [check, setCheck] = useState(false);
+    const [check2, setCheck2] = useState(false)
+
+    const genAI = new GoogleGenerativeAI("AIzaSyA3x6lbJDBuSoiKaVbLRX5eJz3E-VskOig");
+
+const [text123, setText123] = useState('')
+
+async function run() {
+  // For text-only input, use the gemini-pro model
+  const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+
+  const result = await model.generateContent(value);
+  const response = await result.response;
+    //setText123(response.text())
+  console.log(result.response)
+  setMessage2((prevMessages) => [...prevMessages, { message: response.text(), class: 'left' }]);
+}
 
 
     useEffect(() => {
@@ -59,8 +76,24 @@ const Overview = () => {
         setValue(''); // Clear input field after sending message
     };
 
+    const handleSubmit2 = async() => {
+        setMessage2((prevMessages) => [...prevMessages, { message: `${value}`, class: 'right' }]);
+        await run()
+        setValue(''); // Clear input field after sending message
+    };
+
     const chat = () => {
+        if(check2){
+            setCheck2(!check)
+        }
         setCheck(!check);
+    }
+
+    const chat2 = () => {
+        if(check){
+            setCheck(!check)
+        }
+        setCheck2(!check2)
     }
     return (
         <>
@@ -106,15 +139,11 @@ const Overview = () => {
                             </div>
                         </div>
                        <input onClick={chat} style={{textAlign: 'center', width: '9vw', height: '33px', display: 'block', margin: 'auto', backgroundColor: '#37ffce', border: 'none', borderRadius: '8px'}} type='button' value='chat'/>
+                       <input onClick={chat2} style={{textAlign: 'center', width: '9vw', height: '33px', display: 'block', margin: 'auto', backgroundColor: '#37ffce', border: 'none', borderRadius: '8px',  marginTop: '8px'}} type='button' value='chat_with_AI'/>
                     </div>
                 </div>
                 {check && <div style={{ position: "absolute", backgroundColor: "white", width: "25vw", height: "360px", left: "72vw", top: "185px" }}>
                     <div className='container234' style={{ width: "25vw", height: "360px", overflowY: "auto", backgroundColor: '#9e6a6a'}}>
-                        {/* {message.map((e, key)=>{
-                            return (
-                                <div key={key} className={`message ${e.class}`}>{e.message}</div>  
-                            )
-                        })} */}
                         {message.map((e, key) => { 
                             return (
                                 <div key={key} className={`message ${e.class}`}>{e.message}</div>
@@ -124,6 +153,20 @@ const Overview = () => {
                     <div id='send-container' style={{ display: "flex" }}>
                         <input type='text' name='messageInp' id='messageInp' value={value} onChange={handleChange} style={{ backgroundColor: "white", width: "90%", height: "30px", borderRadius: "4px" }} />
                         <button className="btn" onClick={handleSubmit}>Send</button>
+                    </div>
+                </div>}
+
+                {check2 && <div style={{ position: "absolute", backgroundColor: "white", width: "25vw", height: "360px", left: "72vw", top: "185px" }}>
+                    <div className='container234' style={{ width: "25vw", height: "360px", overflowY: "auto", backgroundColor: '#9e6a6a'}}>
+                    {message2.map((e, key) => { 
+                            return (
+                                <div key={key} className={`message ${e.class}`}>{e.message}</div>
+                            )
+                        })}
+                    </div>
+                    <div id='send-container' style={{ display: "flex" }}>
+                        <input type='text' name='messageInp' id='messageInp' value={value} onChange={handleChange} style={{ backgroundColor: "white", width: "90%", height: "30px", borderRadius: "4px" }} />
+                        <button className="btn" onClick={handleSubmit2}>Send</button>
                     </div>
                 </div>}
             </div>
